@@ -1,4 +1,17 @@
-﻿<!doctype html>
+﻿
+                  <!-- {% if form.stu_list.get("i").get("lone_True") > 0.5 %}
+                  <span class="layui-badge layui-bg-orange">孤独预警{{form.stu_list.get("i").get("lone_True")}}</span>
+                  {% elif form.stu_list.get("i").get("stress_True") > 0.5 %}
+                  <span class="layui-badge layui-bg-orange">压力预警{{form.stu_list.get("i").get("stress_True")}}</span>
+                  {% elif form.stu_list.get("i").get("PSQI_True") > 0.5 %}
+                  <span class="layui-badge layui-bg-orange">失眠预警{{form.stu_list.get("i").get("PSQI_True")}}</span>
+                  {% elif form.stu_list.get("i").get("PHQ_9_True") > 0.5 %}
+                  <span class="layui-badge layui-bg-orange">抑郁预警{{form.stu_list.get("i").get("PHQ_9_True")}}</span>
+                  {% endif %} -->
+                  {% if form.stu_list[i].get(form.stu_list[i].keys()[0]) > 0.5 %}
+                  <span class="layui-badge layui-bg-gray">{{form.stu_list[i].keys()[0]}}</span>
+                  {% endif %}
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">

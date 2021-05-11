@@ -13,21 +13,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    data = SourceData()
-    return render_template('index.html', form=data, title=data.title)
+    data = IndexData()
+    # stu_list = data.a.keys
+    return render_template('indexNew.html', form=data)
 
-
-@app.route('/corp')
-def corp():
-    data = CorpData()
-    return render_template('index.html', form=data, title=data.title)
-
-
-@app.route('/job')
-def job():
-    data = JobData()
-    return render_template('index.html', form=data, title=data.title)
-
+@app.route('/per/<uid>')
+def per(uid):
+    data = StuData(uid)
+    data.uid = uid
+    # stu_list = data.a.keys
+    return render_template('indexstu.html', form=data)
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', debug=False)
+    app.run(host='127.0.0.1',port=8081, debug=True)

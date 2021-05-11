@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>学生身心健康大数据检测系统</title>
+  <link rel="stylesheet" href="../static/css/layui/css/layui.css">
+</head>
+<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+
+<body>
+  <div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+      <div class="layui-logo">学生身心健康大数据</div>
+
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+          <a href="javascript:;">
+            2021 USST CS CFG 毕业设计
+          </a>
+        </li>
+        <li class="layui-nav-item"><a href="https://Github.com/caoergou">My Github</a></li>
+      </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree" lay-filter="test">
+          <li class="layui-nav-item layui-nav-itemed">
+            <a class="" href="javascript:;">数据总览</a>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;">逐个展示</a>
+            <dl class="layui-nav-child">
+              {% for item in form.stu_list_alert.keys()%}
+              <dd><a href="per/{{item}}"><b>{{item}}</b>
+                  {% if form.stu_list_alert.get(item) == "健康" %}
+                  <span class="layui-badge layui-bg-green">{{form.stu_list_alert.get(item)}}</span>
+                  {% elif form.stu_list_alert.get(item) == "抑郁" %}
+                  <span class="layui-badge">{{form.stu_list_alert.get(item)}}</span>
+                  {% else %}
+                  <span class="layui-badge layui-bg-gray">{{form.stu_list_alert.get(item)}}</span>
+                  {% endif %}
+                </a>
+              </dd>
+              {% endfor %}
+            </dl>
+          </li>
+          <!-- <li class="layui-nav-item"><a href="javascript:;">menu item 123</a></li> -->
+          <li class="layui-nav-item"><a href="">关于与致谢</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="layui-body layui-bg-gray">
+      <!-- 内容主体区域 -->
+      <!-- <div class="layui-row layui-col-space10">
+      <div class="layui-col-md4">
+        1/3
+      </div>
+      <div class="layui-col-md4">
+        1/3
+      </div>
+      <div class="layui-col-md4">
+        1/3
+      </div>
+    </div> -->
+      <div class="layui-row">
+        <div class="layui-row layui-col-space12">
+          <div class="layui-col-md4 ">
+            <div class="layui-card ">
+              <div style="padding: 20px 20px;">
+                <div class="layui-card-header">系统技术信息介绍</div>
+                <div class="layui-card-body ">
+                  <table class="layui-table" lay-skin="line">
+                    <colgroup>
+                      <col width="150">
+                      <col width="200">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>item</th>
+                        <th>value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>系统分析学生总数</td>
+                        <td>49</td>
+                      </tr>
+                      <tr>
+                        <td>原始数据集大小</td>
+                        <td>2.83 GB</td>
+                      </tr>
+                      <tr>
+                        <td>原始数据集总行数</td>
+                        <td>147026951</td>
+                      </tr>
+                      <tr>
+                        <td>数据存储技术</td>
+                        <td>Hadoop HDFS</td>
+                      </tr>
+                      <tr>
+                        <td>数据分析技术</td>
+                        <td>Python Pandas + RandomForest Model </td>
+                      </tr>
+                      <tr>
+                        <td>数据可视化技术</td>
+                        <td>Flask + ECharts</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md4 layui-bg-gray">
+            <div class="layui-panel">
+              <div class="boxall">
+                <div style="padding: 10px 10px;">
+                  <div class="layui-card-body ">
+                    <div style="width: 500px;height:300px;">
+                      <table class="layui-table" lay-skin="line">
+                        <colgroup>
+                          <col width="150">
+                          <col width="200">
+                          <col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>item</th>
+                            <th>value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>系统分析学生总数</td>
+                            <td>49</td>
+                          </tr>
+                          <tr>
+                            <td>原始数据集大小</td>
+                            <td>2.83 GB</td>
+                          </tr>
+                          <tr>
+                            <td>原始数据集总行数</td>
+                            <td>147026951</td>
+                          </tr>
+                          <tr>
+                            <td>数据存储技术</td>
+                            <td>Hadoop HDFS</td>
+                          </tr>
+                          <tr>
+                            <td>数据分析技术</td>
+                            <td>Python Pandas + RandomForest Model </td>
+                          </tr>
+                          <tr>
+                            <td>数据可视化技术</td>
+                            <td>Flask + ECharts</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-bg-gray">
+            <div class="layui-panel">
+              <div class="boxall">
+                <div style="padding: 20px 20px;">
+                  <div class="layui-card-body ">
+                    <div id="echart2" style="width: 500px;height:300px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-row">
+        <div class="layui-row layui-col-space12">
+          <div class="layui-col-md4 layui-bg-gray">
+            <div class="layui-panel">
+              <div class="boxall">
+                <div style="padding: 20px 20px;">
+                  <div class="layui-card-body ">
+                    <div id="echart3" style="width: 500px;height:300px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md4 layui-bg-gray">
+            <div class="layui-panel">
+              <div class="boxall">
+                <div style="padding: 20px 20px;">
+                  <div class="layui-card-body ">
+                    <div id="echart4" style="width: 500px;height:300px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-bg-gray">
+            <div class="layui-panel">
+              <div class="boxall">
+                <div style="padding: 20px 20px;">
+                  <div class="layui-card-body ">
+                    <div id="echart5" style="width: 500px;height:300px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+      2021 USST
+    </div>
+  </div>
+
+  <script src="../static/css/layui/layui.js"></script>
+  <script>
+    //JavaScript代码区域
+    layui.use('element', function () {
+      var element = layui.element;
+
+    });
+  </script>
+  <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('echart1'));
+
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+  </script>
+  <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('echart2'));
+
+    option = {
+      tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
+      },
+      legend: {
+        data: ["孤独感风险预警", "压力感风险预警", "失眠风险预警", "抑郁症状风险预警"],
+        left: "right",
+        orient: "vertical",
+      },
+      title: {
+        text: '学生身心健康风险智能预警',
+      },
+      series: [
+        {
+          name: '孤独感风险预警',
+          type: 'pie',
+          selectedMode: 'single',
+          radius: ["3%", '13%'],
+          label: {
+            position: 'inner',
+            fontSize: 10,
+          },
+          labelLine: {
+            show: false
+          },
+          data: [
+            { value: 25, name: '孤独感过强' },
+            { value: 23, name: '无孤独风险' }
+          ]
+        },
+        {
+          name: '压力感风险预警',
+          type: 'pie',
+          radius: ['23%', '33%'],
+          label: {
+            position: 'inner',
+            fontSize: 10,
+          },
+          labelLine: {
+            length: 30,
+          },
+          data: [
+            { value: 23, name: '压力过大' },
+            { value: 25, name: '压力正常' }
+          ]
+        },
+        {
+          name: '失眠风险预警',
+          type: 'pie',
+          radius: ['43%', '53%'],
+          label: {
+            position: 'inner',
+            fontSize: 10,
+          },
+          labelLine: {
+            length: 30,
+          },
+          data: [
+            { value: 23, name: '失眠风险' },
+            { value: 25, name: '无失眠风险' }
+          ]
+        },
+        {
+          name: '抑郁症状风险预警',
+          type: 'pie',
+          selectedMode: 'single',
+          radius: ["63%", '73%'],
+          label: {
+            position: 'inner',
+            fontSize: 10,
+          },
+          labelLine: {
+            show: false
+          },
+          data: [
+            { value: 12, name: '抑郁风险' },
+            { value: 36, name: '无抑郁风险' }
+          ]
+        }
+      ]
+    };    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+  </script>
+  <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('echart3'));
+
+
+
+    var data1 = {{ form.total_phonelock_day_mean|safe }}
+
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        position: function (pt) {
+          return [pt[0], '10%'];
+        }
+      },
+      legend: {
+        left: "right",
+        orient: "vertical",
+        data: ['学生总体每日手机解锁次数']
+      },
+      title: {
+        text: '每日手机解锁次数',
+      },
+      xAxis: {
+        type: 'time',
+        boundaryGap: false
+      },
+      yAxis: {
+        type: 'value',
+        boundaryGap: [0, '100%']
+      },
+      dataZoom: [{
+        type: 'inside',
+        start: 0,
+        end: 100
+      }, {
+        start: 0,
+        end: 100
+      }],
+      series: [
+        {
+          name: '学生总体每日手机解锁次数',
+          type: 'line',
+          smooth: true,
+          symbol: 'none',
+          areaStyle: {},
+          data: data1
+        }
+
+      ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+  </script>
+  <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('echart4'));
+
+    var data1 = {{ form.total_audio_hour_mean|safe }}
+ 
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        position: function (pt) {
+          return [pt[0], '10%'];
+        }
+      },
+      legend: {
+        left: "right",
+        orient: "vertical",
+        data: ['学生总体平均环境声场强度']
+      },
+      title: {
+        text: '平均环境声场强度',
+      },
+      xAxis: {
+        type: 'time',
+        boundaryGap: false
+      },
+      yAxis: {
+        type: 'value',
+        boundaryGap: [0, '50%']
+      },
+      dataZoom: [{
+        type: 'inside',
+        start: 0,
+        end: 10
+      }, {
+        start: 0,
+        end: 10
+      }],
+      series: [
+
+        {
+          name: '学生总体平均环境声场强度',
+          type: 'line',
+          smooth: true,
+          symbol: 'none',
+          areaStyle: {},
+          data: data1
+        }
+
+      ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+  </script>
+  <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('echart5'));
+
+    var data1 = {{ form.total_activity_hour_mean|safe }}
+
+    // var data1 = 
+    // var data2 = 
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        position: function (pt) {
+          return [pt[0], '10%'];
+        }
+      },
+      legend: {
+        left: "right",
+        orient: "vertical",
+        data: ['学生总体平均活动强度']
+      },
+      title: {
+        text: '学生平均活动强度',
+      },
+      xAxis: {
+        type: 'time',
+        boundaryGap: false
+      },
+      yAxis: {
+        type: 'value',
+        boundaryGap: [0, '10%']
+      },
+      dataZoom: [{
+        type: 'inside',
+        start: 12,
+        end: 14
+      }, {
+        start: 12,
+        end: 14
+      }],
+      series: [
+
+        {
+          name: '学生总体平均活动强度',
+          type: 'line',
+          smooth: true,
+          symbol: 'none',
+          areaStyle: {},
+          data: data1
+        }
+
+      ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+  </script>
+
+</body>
+
+</html>

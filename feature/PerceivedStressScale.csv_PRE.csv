@@ -1,0 +1,45 @@
+,uid,type,"1. In the last month, how often have you been upset because of something that happened unexpectedly?","2. In the last month, how often have you felt that you were unable to control the important things in your life?","3. In the last month, how often have you felt nervous and ""stressed""?","4. In the last month, how often have you felt confident about your ability to handle your personal problems?","5. In the last month, how often have you felt that things were going your way?","6. In the last month, how often have you found that you could not cope with all the things that you had to do?","7. In the last month, how often have you been able to control irritations in your life?","8. In the last month, how often have you felt that you were on top of things?","9. In the last month, how often have you been angered because of things that were outside of your control?","10. In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",score
+0,u00,pre,Sometime,Sometime,Fairly often,Fairly often,Sometime,Very often,Sometime,Sometime,Fairly often,Fairly often,-10
+1,u01,pre,Sometime,Sometime,Sometime,Sometime,Fairly often,Sometime,Fairly often,Fairly often,Almost never,Almost never,-1
+2,u02,pre,Fairly often,Sometime,Sometime,Fairly often,Almost never,Sometime,Almost never,Sometime,Sometime,Almost never,-7
+3,u03,pre,Sometime,Almost never,Sometime,Almost never,Sometime,Never,Almost never,Never,Never,Never,-3
+4,u04,pre,Almost never,Almost never,Fairly often,Sometime,Sometime,Fairly often,Sometime,Almost never,Sometime,Sometime,-7
+5,u05,pre,Almost never,Sometime,Almost never,Very often,Very often,Almost never,Fairly often,Very often,Almost never,Never,7
+6,u07,pre,Sometime,Almost never,Fairly often,Very often,Very often,Almost never,Fairly often,Fairly often,Sometime,Almost never,2
+7,u08,pre,Sometime,Fairly often,Very often,Sometime,Sometime,Sometime,Fairly often,Sometime,Sometime,Fairly often,-9
+8,u09,pre,Almost never,Almost never,Sometime,Sometime,Fairly often,Almost never,Fairly often,Sometime,Almost never,Almost never,1
+9,u10,pre,Fairly often,Fairly often,Fairly often,Fairly often,Fairly often,Sometime,Almost never,Very often,Fairly often,Almost never,-6
+10,u12,pre,Almost never,Almost never,Sometime,Fairly often,Fairly often,Almost never,Fairly often,Fairly often,Almost never,Almost never,3
+11,u13,pre,Almost never,Fairly often,Very often,Almost never,Almost never,Almost never,Almost never,Never,Sometime,Almost never,-11
+12,u14,pre,Almost never,Never,Sometime,Fairly often,Sometime,Almost never,Very often,Very often,Almost never,Almost never,5
+13,u15,pre,Fairly often,Sometime,Fairly often,Sometime,Sometime,Sometime,Sometime,Sometime,Sometime,Sometime,-8
+14,u16,pre,Fairly often,Very often,Very often,Fairly often,Sometime,Sometime,Sometime,Fairly often,Sometime,Fairly often,-10
+15,u17,pre,Fairly often,Very often,Very often,Sometime,Almost never,Very often,Sometime,Never,Fairly often,Very often,-19
+16,u18,pre,Fairly often,Fairly often,Fairly often,Fairly often,Almost never,Fairly often,Almost never,Sometime,Fairly often,Fairly often,-13
+17,u19,pre,Almost never,Sometime,Sometime,Almost never,Sometime,Almost never,Almost never,Sometime,Sometime,Sometime,-6
+18,u20,pre,Almost never,Almost never,Sometime,Fairly often,Sometime,Sometime,Very often,Sometime,Almost never,Sometime,0
+19,u22,pre,Almost never,Never,Almost never,Very often,Sometime,Never,Fairly often,Very often,Almost never,Never,8
+20,u23,pre,Fairly often,Fairly often,Very often,Sometime,Sometime,Fairly often,Sometime,Sometime,Fairly often,Fairly often,-13
+21,u24,pre,Sometime,Almost never,Fairly often,Fairly often,Fairly often,Sometime,Sometime,Almost never,Sometime,Almost never,-4
+22,u27,pre,Sometime,Sometime,Fairly often,Fairly often,Sometime,Sometime,Sometime,Sometime,Almost never,Almost never,-4
+23,u30,pre,Sometime,Sometime,Sometime,Very often,Fairly often,Almost never,Very often,Very often,Almost never,Never,5
+25,u32,pre,Never,Never,Sometime,Very often,Fairly often,Never,Very often,Very often,Never,Never,11
+26,u33,pre,Fairly often,Very often,Very often,Almost never,Almost never,Very often,Almost never,Never,Sometime,Fairly often,-19
+27,u34,pre,Almost never,Almost never,Sometime,Fairly often,Fairly often,Sometime,Fairly often,Sometime,Sometime,Almost never,0
+28,u35,pre,Sometime,Sometime,Almost never,Fairly often,Fairly often,Sometime,Very often,Sometime,Almost never,Sometime,0
+29,u36,pre,Almost never,Almost never,Sometime,Fairly often,Fairly often,Almost never,Fairly often,Sometime,Almost never,Almost never,2
+30,u42,pre,Sometime,Fairly often,Very often,Almost never,Almost never,Sometime,Sometime,Sometime,Almost never,Sometime,-10
+31,u43,pre,Sometime,Fairly often,Fairly often,Fairly often,Sometime,Sometime,Fairly often,Sometime,Fairly often,Sometime,-7
+32,u44,pre,Almost never,Sometime,Sometime,Sometime,Sometime,Almost never,Sometime,Almost never,Sometime,Almost never,-4
+34,u46,pre,Very often,Fairly often,Sometime,Almost never,Sometime,Very often,Never,Sometime,Very often,Fairly often,-17
+35,u47,pre,Sometime,Almost never,Fairly often,Fairly often,Fairly often,Almost never,Sometime,Fairly often,Almost never,Almost never,0
+36,u49,pre,Sometime,Sometime,Sometime,Fairly often,Fairly often,Sometime,Very often,Sometime,Sometime,Sometime,-2
+37,u50,pre,Almost never,Almost never,Almost never,Never,Sometime,Almost never,Sometime,Sometime,Fairly often,Sometime,-5
+38,u51,pre,Almost never,Almost never,Sometime,Sometime,Sometime,Almost never,Fairly often,Sometime,Almost never,Almost never,0
+39,u52,pre,Sometime,Very often,Very often,Almost never,Fairly often,Sometime,Very often,Sometime,Almost never,Fairly often,-8
+40,u53,pre,Fairly often,Fairly often,Very often,Sometime,Sometime,Sometime,Fairly often,Sometime,Sometime,Sometime,-9
+41,u54,pre,Sometime,Sometime,Fairly often,Fairly often,Sometime,Sometime,Sometime,Sometime,Almost never,Sometime,-5
+42,u56,pre,Almost never,Almost never,Almost never,Fairly often,Fairly often,Sometime,Fairly often,Fairly often,Almost never,Almost never,3
+43,u57,pre,Almost never,Sometime,Sometime,Very often,Fairly often,Never,Fairly often,Fairly often,Almost never,Never,5
+44,u58,pre,Sometime,Fairly often,Very often,Fairly often,Almost never,Almost never,Very often,Almost never,Sometime,Almost never,-6
+45,u59,pre,Sometime,Fairly often,Sometime,Sometime,Sometime,Fairly often,Very often,Fairly often,Sometime,Almost never,-4
