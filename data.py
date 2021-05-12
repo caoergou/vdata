@@ -5,7 +5,7 @@
 # @Site : 
 # @Describe:
 
-import json
+import ujson as json
 
 
 class IndexData():
@@ -51,14 +51,15 @@ class StuData(IndexData):
         按照 IndexData 的格式覆盖数据即可
         """
         super().__init__()
-        with open(f'./feature/activity/per/{uid}_hour.json', 'r', encoding='utf-8') as f:
-            stu_activity_hour_mean = json.loads(f.read())
+        with open(f'./feature/activity/per/{uid}_hour.json', 'r', encoding='utf-8') as f2:
+            stu_activity_hour_mean = json.loads(f2.read())
             self.stu_activity_hour_mean = stu_activity_hour_mean
 
-        with open(f'./feature/audio/per/{uid}_hour.json', 'r', encoding='utf-8') as f:
-            stu_audio_hour_mean = json.loads(f.read())
+        with open(f'./feature/audio/per/{uid}_hour.json', 'r', encoding='utf-8') as f3:
+            t = f3.read()
+            stu_audio_hour_mean = json.loads(t)
             self.stu_audio_hour_mean = stu_audio_hour_mean
 
-        with open(f'./feature/phonelock/per/{uid}.json', 'r', encoding='utf-8') as f:
-            phonelock_day_count = json.loads(f.read())
+        with open(f'./feature/phonelock/per/{uid}.json', 'r', encoding='utf-8') as f4:
+            phonelock_day_count = json.loads(f4.read())
             self.stu_phonelock_day_count = phonelock_day_count

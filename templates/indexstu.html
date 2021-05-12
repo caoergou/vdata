@@ -339,9 +339,8 @@
 
 
 
-    var data1 = {{ form.total_phonelock_day_mean|safe }}
-    var data2 = {{ form.stu_phonelock_day_count|safe }}
-
+    var data1 = {{ form.total_phonelock_day_mean| safe }}
+    var data2 = {{ form.stu_phonelock_day_count| safe }}
     option = {
       tooltip: {
         trigger: 'axis',
@@ -401,8 +400,6 @@
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('echart4'));
 
-    var data1 = {{ form.total_audio_hour_mean|safe }}
-    var data2 = {{ form.stu_audio_hour_mean|safe }}
     option = {
       tooltip: {
         trigger: 'axis',
@@ -435,14 +432,13 @@
         end: 10
       }],
       series: [
-
         {
           name: '学生总体平均环境声场强度',
           type: 'line',
           smooth: true,
           symbol: 'none',
           areaStyle: {},
-          data: data1
+          data: []
         },
         {
           name: '学生 {{form.uid}} 平均环境声场强度',
@@ -450,14 +446,43 @@
           smooth: true,
           symbol: 'none',
           areaStyle: {},
-          data: data2
+          data: []
         }
 
       ]
     };
-
-    // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
+    // myChart.showLoading(); // 显示加载动画
+    $.ajax({
+         type : "get",
+         async : true,            //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）
+         url : "{{url_for('stu', uid=form.uid,data='audio')}}",    //请求发送
+         dataType : "json",        //返回数据形式为json
+         success : function(result) {
+          myChart.hideLoading(); // 隐藏加载动画
+
+            // 填入数据
+            myChart.setOption({
+              series: [{
+                name: '学生总体平均环境声场强度', // 根据名字对应到相应的系列
+                data: result.stu_audio_hour_mean // 转化为数字（注意map）
+              }, {
+                name: '学生 {{form.uid}} 平均环境声场强度',
+                data: result.total_audio_hour_mean
+              }]
+            });
+             
+        },
+         error : function(errorMsg) { //没做出错处理
+                 //请求失败时执行该函数
+                 alert("图表请求数据失败!");
+                 myChart.hideLoading();
+            }
+        })
+
+
+
+    
   </script>
   <script>
     // 基于准备好的dom，初始化echarts实例
