@@ -29,7 +29,7 @@
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree" lay-filter="test">
           <li class="layui-nav-item layui-nav-itemed">
-            <a class="" href="javascript:;">数据总览</a>
+            <a class="" href="{{url_for('index')}}">数据总览</a>
           </li>
           <li class="layui-nav-item">
             <a href="javascript:;">逐个展示</a>
@@ -48,25 +48,12 @@
               {% endfor %}
             </dl>
           </li>
-          <!-- <li class="layui-nav-item"><a href="javascript:;">menu item 123</a></li> -->
           <li class="layui-nav-item"><a href="">关于与致谢</a></li>
         </ul>
       </div>
     </div>
 
     <div class="layui-body layui-bg-gray">
-      <!-- 内容主体区域 -->
-      <!-- <div class="layui-row layui-col-space10">
-      <div class="layui-col-md4">
-        1/3
-      </div>
-      <div class="layui-col-md4">
-        1/3
-      </div>
-      <div class="layui-col-md4">
-        1/3
-      </div>
-    </div> -->
       <div class="layui-row">
         <div class="layui-row layui-col-space12">
           <div class="layui-col-md4 ">
@@ -105,7 +92,7 @@
                       </tr>
                       <tr>
                         <td>数据分析技术</td>
-                        <td>Python Pandas + RandomForest Model </td>
+                        <td> PySpark + RandomForests </td>
                       </tr>
                       <tr>
                         <td>数据可视化技术</td>
@@ -122,46 +109,8 @@
               <div class="boxall">
                 <div style="padding: 10px 10px;">
                   <div class="layui-card-body ">
-                    <div style="width: 500px;height:300px;">
-                      <table class="layui-table" lay-skin="line">
-                        <colgroup>
-                          <col width="150">
-                          <col width="200">
-                          <col>
-                        </colgroup>
-                        <thead>
-                          <tr>
-                            <th>item</th>
-                            <th>value</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>系统分析学生总数</td>
-                            <td>49</td>
-                          </tr>
-                          <tr>
-                            <td>原始数据集大小</td>
-                            <td>2.83 GB</td>
-                          </tr>
-                          <tr>
-                            <td>原始数据集总行数</td>
-                            <td>147026951</td>
-                          </tr>
-                          <tr>
-                            <td>数据存储技术</td>
-                            <td>Hadoop HDFS</td>
-                          </tr>
-                          <tr>
-                            <td>数据分析技术</td>
-                            <td>Python Pandas + RandomForest Model </td>
-                          </tr>
-                          <tr>
-                            <td>数据可视化技术</td>
-                            <td>Flask + ECharts</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div style="width: 500px;height:350px;">
+                      <img src="../static/picture/logo.png" width="500" height="300" alt="系统logo" />
                     </div>
                   </div>
                 </div>
